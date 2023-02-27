@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
+import Terkup from './Terkup'
 import { Button, StyleSheet, Text, View, TouchableHighlight, Alert } from 'react-native';
 
 export default function App() {
-  let [ countnum, setCountNum ] = useState(0);
+  let [countnum, setCountNum] = useState(0);
 
   function increment() {
     let actualCount = countnum
@@ -24,26 +25,29 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Button title='Reset' onPress={resetCounter}>Reset Counter</Button>
+    <>
+      {/* <View style={styles.container}>
+        <Button title='Reset' onPress={resetCounter}>Reset Counter</Button>
 
-      <Text
-        style={styles.title}
-      >Press button to count o_O</Text>
+        <Text
+          style={styles.title}
+        >Press button to count o_O</Text>
 
-      <Text>{countnum}</Text>
+        <Text>{countnum}</Text>
 
-      <TouchableHighlight
-        style={styles.runButton}
-        onPress={increment}
-      >
-        <Text>Count</Text>
-      </TouchableHighlight>
+        <TouchableHighlight
+          style={styles.runButton}
+          onPress={increment}
+        >
+          <Text>Count</Text>
+        </TouchableHighlight>
 
-      <Button onPress={showCredits}>Credits</Button>
-      <StatusBar style="auto" />
+        <StatusBar style="auto" />
 
-    </View>
+      </View> */}
+      <Terkup />
+    </>
+
   );
 }
 
